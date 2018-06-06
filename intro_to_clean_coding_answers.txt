@@ -1,0 +1,151 @@
+Questions
+
+1. In your own words, explain what clean code is and why it is important.
+
+A: Clean code should be easy to read and alter by an outside developer. It should also be simple and require the least amount of editing should something change. 
+
+2. Read this article about Toyota and their use of bad code. Although you may not yet understand all of the topics discussed, think about another commonly used object that relies on computers and explain what would happen if the code was not created to an acceptable standard.
+
+A: Online health documentation. Sloppy code could compromise patient confidentiality, mis-charge patients, or cause errors in accurate insurance coverage. 
+
+3. Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+
+A: The example is not clean code. The function and variable names are not clear, there are too many comments (the code should be able to speak for itself), the nesting makes the function harder to read. 
+
+Refactored Code:
+
+FUNCTION convertDegrees(degrees, degreeType)               
+  IF degreeType = "Fahrenheit" THEN 
+    CALL toCelsius with degrees              
+  ELSE IF degreeType = "Celsius" THEN
+    CALL toFahrenheit with degrees                          
+ END IF
+END FUNCTION
+
+FUNCTION toCelsius 
+  SET totalCelsius to (degrees−32) * (5/9)
+  PRINT totalCelsius      
+END FUNCTION
+
+FUNCTION toFahrenheit
+  SET totalFahrenheit to degrees * 1.8000 + 32.00   
+  PRINT totalFahrenheit
+END FUNCTION 
+
+4 Would you consider the following to be clean code? Explain why or why not. If not, refactor the code.
+
+A: I would not consider it clean code, because the variable names were confusing (sum and total are too similar).
+
+Refactored Code:
+
+FUNCTION calculatePercentage(number, total)
+ IF NOT (total = 0) THEN
+     SET percentage to number / total * 100
+ ELSE
+   PRINT "Sorry, cannot divide by 0"
+ END IF
+ PRINT percentage
+END FUNCTION
+
+5. Using pseudocode, refactor the code for the following examples using the principles you have learned in this checkpoint.
+
+a. The following function prints the subtotal of a customer's transaction and receives payment accordingly.
+
+FUNCTION checkOutCustomer(subTotal, tax, discountRate, paymentType)
+  SET amount to subTotal * discountRate + (subTotal * tax)
+  PRINT "Your total due is: " + amount
+  IF paymentType = 'CASH' THEN
+    CALL withCash with amount
+    PRINT "Change due: " + cashBack 
+  ELSE IF paymentType = 'CREDIT CARD' THEN
+    PRINT "Your credit card has been charged: " + amount
+  END IF
+END FUNCTION
+
+FUNCTION withCASH(cashReceived)
+  SET cashBack to cashReceived - amount
+END FUNCTION
+
+b. The following function checks out a book if there are no issues with the guest's account.  
+
+FUNCTION checkoutBook(book, guest)
+  IF guest.accountActive && NOT(guest.hasOverdueBooks) && guest.outstandingFees === 0 THEN
+    APPEND book to guest.books
+    SET book.status to "Checked OUT"
+    PRINT "Your books have been issues."
+  ELSE
+    PRINT "Unable to check out book"
+  END IF
+END FUNCTION 
+
+c. The following class is a code snippet that should support the transactions a customer can perform at an ATM. 
+ 
+CLASS AccountStatus
+
+  FUNCTION creditCardOffer
+    IF NOT(customer.hasCreditCard) THEN
+      CALL offerCreditCard
+    END
+  END FUNCTION
+
+  FUNCTION checkStatus
+    IF NOT(customer.hasCheckingAccount) THEN
+      CALL offerCheckingAccount
+    END
+  END FUNCTION
+
+END CLASS
+
+CLASS AccountFunds
+
+  FUNCTION deposit(amount)
+    SET balance to balance + amount
+  END FUNCTION
+
+  FUNCTION withdraw(amount)
+    SET balance to balance - amount
+  END FUNCTION
+
+  FUNCTION displayBalance
+    PRINT balance
+  END FUNCTION
+
+END CLASS
+
+6. Square Given an array of integers, find out whether the sum of the integers is a perfect square. If it is a perfect square, return the square root, otherwise return the sum.
+
+A: 
+
+function SquareOrSum (array) {
+  var total = 0
+  for (i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+   var squareRoot = Math.sqrt(total)
+  if (squareRoot % 1 === 0) {
+    console.log("The square root of the array is  " + squareRoot)
+  } else {
+    console.log("The sum of the array is " + total)
+  }
+}
+
+7. Duplicate Given an array of integers, find out whether the array contains any duplicate elements. The function should return true if any value appears at least twice in the array, and false if every element is distinct.
+
+A: 
+
+function hasDuplicates(array) {
+  let duplicates = [];
+  array.forEach(function(element, index) {
+    if (array.indexOf(element, index + 1) > -1) {
+      if (duplicates.indexOf(element) === -1) {
+        duplicates.push(element);
+      }
+    }
+  });
+  if (duplicates.length > 0) {
+    return true
+  } else {
+    return false
+  }
+}
+ 
