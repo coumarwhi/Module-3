@@ -1,0 +1,56 @@
+
+SHORT ANSWER
+
+1. Why do programmers use pseudocode?
+	A: To express what code should do without using a particular language. It's a way 	to brainstorm before actual coding. 
+2. If you run pseudocode on your computer what would happen?
+	A: Nothing will happen. It is for humans, not for a computer to actually run. 
+
+
+PROGRAMMING ASSIGNMENT
+
+1. Create a function that takes two numbers and prints out the greater number.
+
+FUNCTION greatestNumber (number1, number2)
+  IF number1 is greater than number2
+    PRINT number1
+  ELSE number 2 is greater than number 1
+    PRINT number 2
+  ELSE
+    print "The two numbers are equal"
+  END IF
+END FUNCTION 	
+
+2. Create a function that prints out the numbers from 1 to 100.
+
+FUNCTION to100
+  Set initial number to 1
+  WHILE number is less than or equal to 100
+    PRINT number
+    Increase number by 1
+  ENDWHILE 
+END FUNCTION 
+
+3. Create a function that searches for a specific entry in a phonebook.
+
+FUNCTION nameSearch(name, phonebook)
+  FOR loop through elements in phonebook 
+    IF name === phonebook element
+      PRINT name + " is in the phonebook"
+    ELSE 
+      PRINT name + " is not in the phonebook"
+    ENDIF 
+  ENDFOR
+END FUNCTION
+
+4. Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
+
+function nameSearch(name, phonebook) {
+  for(i = 0; i < phonebook.length; i++) {
+    if(phonebook[i] === name) {
+      return name + " is in the phonebook"
+    } else {
+      return name + " isn't in the phonebook"
+    }
+  }
+}
