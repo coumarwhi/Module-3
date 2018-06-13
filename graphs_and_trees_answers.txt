@@ -1,0 +1,52 @@
+EXERCISES
+
+1. What is a binary tree and what makes it unique to other trees?
+
+A: A binary tree is a data structure in which each node may point to a left child and a right child. 
+
+2. What is a heuristic?
+
+A: A heuristic is a guess that an algorithm makes to solve a complex problem sooner by sacrificing accuracy. 
+
+3. What is another problem besides the shortest-path problem that requires the use of heuristics?
+
+A: Another problem that requires the use of heuristics is virus scanning. Many virus scanners use heuristic rules for detecting viruses and other forms of malware. 
+
+4. What is the difference between a depth-first search and a breadth-first search?
+
+A: A DFS travels down a single branch in search of a desired element, if the element is not found the process moves upwards and repeats again using unvisited nodes. A BFS searches an entire row of nodes before proceeded to the next row. 
+
+5. Explain in your own words what an undirected, a-cyclic, unweighted graph is.
+
+A: An undirected graph does not clearly have a start or end at the edge of two connecting nodes. An A-cyclic graph does not form a loop. An unweighted graph does not use weights to assign the cost of travel between nodes. 
+
+6. What kind of graph is a binary search tree?
+
+A: A binary search tree is an example of an a-cyclic graph. 
+
+
+PROGRAMMING QUESTIONS
+
+1. Given a Binary Search Tree and a value, write a function that checks to see whether the value exists within the tree.
+
+Example: The value 10 exists in the tree. The value 23 does not exist in the tree.
+
+A:
+FUNCTION findValue(current, n)
+  IF n = current.value OR current = null 
+    THEN return current
+  ENDIF
+  IF n > current.value
+    THEN return findValue(current.left, n)
+    ELSE return findValue(current.right, n)
+  ENDIF
+END FUNCTION
+
+2. Given a Binary Search Tree and two nodes, n1 and n2, write a function that finds the distance between the two nodes.
+
+Example: The distance between the nodes 4 and 10 is 4. The distance between the nodes 8 and 10 is 1. The distance between the nodes 1 and 14 is 4.
+
+A: 
+FUNCTION findDistance(n1, n2, root)
+  totalDistance = distance(root, n1) + distance(root, n2) - 2*distance(root, lowestCommonAncestor)
+END FUNCTION
