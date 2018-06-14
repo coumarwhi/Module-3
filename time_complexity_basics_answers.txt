@@ -1,0 +1,45 @@
+EXERCISES
+
+1. What is time complexity and what is its relation to algorithms?
+
+A: Time complexity is a function that estimates the time it takes for a program to execute.Time complexity of algorithms determines the runtime.  
+
+2. What is runtime?
+
+A: Runtime is the physical time duration of an algorithm. 
+
+3. How is the runtime of an algorithm calculated?
+
+A: Add up how many instructions the algorithm will execute as a function of the size of its input, then simplify the expression to the largest term and drop any constants. 
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+
+A: 
+
+- Constant Growth Rate (O(1))
+- Logarithmic Growth Rate O(log n)
+- Linear Growth Rate O(n)
+- Log-Linear Growth Rate O(n log n)
+- Quadratic Growth Rate O(n^2)
+- Exponential Growth Rate O(2^n)
+- Cubic Growth Rate O(2^n)
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+
+A: Constant Growth Rate: Getting ticket checked before going into the theater. 
+
+6. Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+
+A: The linear search has a time complexity of O(n)
+
+7. Determine the time complexity of the following snippet of code.
+
+A: O(n)
+
+8. Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
+
+A: Fibonacci sequence has a time complexity of O(2^n)
+
+9. Out of the code snippets you just saw, which is the most time efficient?
+
+A: The second snippet is the most efficient. 
