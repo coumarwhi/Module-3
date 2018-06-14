@@ -1,0 +1,52 @@
+EXERCISES
+
+1. Using proper pseudo-code, describe the following primitive algorithms:
+
+- Making coffee;
+
+Grab coffee beans
+Pour beans into coffee grinder
+Grind the beans
+Pour ground beans into French Press 
+Pour hot water into the French Press until filled to the line.
+Put lid on French Press 
+Wait 4 min
+After 4 min is up, press down on French Press top
+Press until mesh cannot go down any farther
+With lid still on, pour coffee into mug
+
+- Washing dishes;
+
+Grab sponge
+Turn on hot water
+Put sponge under hot water until wet
+Grab dish soap
+Pour a few drops of dish soap onto wetted sponge
+Grab dirty dish
+Scrub dish with sponge until clean
+Turn on hot water
+Rinse dish under hot water until soap is removed
+Place dish onto drying rack
+
+
+- A choice of your own.
+
+FEEDING THE CAT
+
+Grab canned cat food
+Grab can opener 
+Open can with can opener
+Grab bowl
+Place contents of can into the bowl
+Set bowl down onto the floor 
+Throw can away
+
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+A: Facebook: algorithm that prioritizes "meaningful interactions" from family and friends through facebook feed. 
+Netflix: predicts shows and movies user would want to watch. 
+LinkedIn: prioritized relevant content to user. 
+
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+A: an efficient algorithm should be consistent in successful predictions and continue to learn. This allows for more relevant data and more user satisfaction. 
